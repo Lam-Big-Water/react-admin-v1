@@ -1,12 +1,8 @@
-// react hooks API
 import React, {useEffect} from 'react'
-// react-router-dom@6
 import {useNavigate,Navigate} from 'react-router-dom'
 import { Button, Form, Input, message } from 'antd';
 import { connect } from 'react-redux';
-// redux
 import { createSaveUserInfoAction } from '../../redux/action_creators/login_action';
-// user信息接口
 import { reqLogin } from '../../api';
 import logo from './imgs/logo2.svg'
 import './Login.less'
@@ -17,11 +13,10 @@ function Login(props) {
     // 函数组件可以通过 useHistory 获取 history 对象。
     const history = useNavigate();
     console.log(history)
-    // 获取当前组件的props
+
     useEffect(()=>{
         console.log(props);
     })
-    // antd表单成功的值
     const onFinish = async(values) => {
         const {username, password} = values
         // console.log(values) {username:xxx, password:xxx}
@@ -33,10 +28,8 @@ function Login(props) {
         //     console.log(reason);
         // })
         // 精简写法
-        // 向服务器发送参数
         let result = await reqLogin(username,password)
         console.log(result)
-        // 解构赋值 服务器返回的数据
         const {status,msg,data} = result
         if (status === 0){
             console.log(data);
@@ -49,11 +42,10 @@ function Login(props) {
             message.warning(msg,1)
         }
     };
-    // antd表单失败的值
     const onFinishFailed = (errorInfo) => {
         message.error('表单输入有误，请检查！',1)
     };
-    
+    // 点击登录按钮的回调
     const handleSubmit = (event) => {
         // 阻止提交事件
         event.preventDefault();

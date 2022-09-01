@@ -1,8 +1,6 @@
 import axios from "axios";
 import {message} from 'antd'
 import NProgress from 'nprogress'
-import store from '../redux/store';
-import {createDeleteUserInfoAction} from '../redux/action_creators/login_action'
 import qs from 'qs'
 // 获取token
 // import store from '../redux/store'
@@ -45,17 +43,8 @@ instance.interceptors.response.use(
     },
     (error) => {
         NProgress.done()
-        // 当权限过期，或者401时，删除user信息，使其回到login获取最新的user信息
-        if(error.response.status === 401) {
-            message.error('身份校验失败，请重新登录',1)
-            // this.props.deleteUserInfo()
-            // 分发一个删除用户信息的action
-            store.dispatch(createDeleteUserInfoAction())
-        }else{
         // 请求若失败，走这里
         message.error(error.message,1)
-        }
-        // 中断promise链
         return new Promise(()=>{})
     }
 );

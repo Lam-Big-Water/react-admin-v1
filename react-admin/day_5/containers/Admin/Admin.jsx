@@ -8,11 +8,8 @@ import { reqCategoryList } from '../../api'
 import {connect} from 'react-redux'
 // react-router-dom@6
 import {Navigate} from 'react-router-dom'
-import './css/Admin.less'
-import Header from './Header/Header';
 
-
-const { Footer, Sider, Content } = Layout;
+const { Header, Footer, Sider, Content } = Layout;
 
 function Admin(props) {
     // 获取当前组件的props
@@ -36,14 +33,16 @@ function Admin(props) {
     }else{
         console.log('ok');
         return (
-                <Layout className='admin'>
-                    <Sider className='sider'>Sider</Sider>
+            <div>
+                <Layout>
+                    <Sider>Sider</Sider>
                     <Layout>
-                        <Header className='header'>Header</Header>
-                        <Content className='content'>Content</Content>
-                        <Footer className='footer'>Footer</Footer>
+                        <Header>Header</Header>
+                        <Content>Content</Content>
+                        <Footer>Footer</Footer>
                     </Layout>
                 </Layout>
+            </div>
         )
     }
     

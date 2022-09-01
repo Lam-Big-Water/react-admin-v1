@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import {Button,Modal} from 'antd'
 import {FullscreenOutlined,FullscreenExitOutlined,ExclamationCircleOutlined} from '@ant-design/icons';
 import screenfull from 'screenfull/dist/screenfull';
+import {useLocation} from 'react-router-dom'
 import {connect} from 'react-redux'
 import dayjs from 'dayjs';
 import {createDeleteUserInfoAction} from '../../../redux/action_creators/login_action'
@@ -17,6 +18,9 @@ function Header(props) {
     const [isFull,setScreen] = useState(false)
 
     const [weatherInfo,setWeatherInfo] = useState({})
+
+    const location = useLocation()
+
 
     // const [time,setTime] = useState()
 
@@ -70,7 +74,7 @@ function Header(props) {
             </div>
             <div className='header-bottom'>
                 <div className='header-bottom-left'>
-                    图
+                    {location.pathname}
                 </div>
                 <div className='header-bottom-right'>
                     {date}

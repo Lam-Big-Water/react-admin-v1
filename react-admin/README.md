@@ -9,3 +9,5 @@ day4 路由跳转，本地存储，退出登录
 day5 token 验证
 
 day6 全屏插件，时间插件，用jsonp获取天气信息 获取路由pathname
+
+day7 动态生成路由菜单，使用redux保存标题

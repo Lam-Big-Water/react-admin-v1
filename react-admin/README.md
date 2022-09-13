@@ -13,3 +13,5 @@ day6 全屏插件，时间插件，用jsonp获取天气信息 获取路由pathna
 day7 动态生成路由菜单，使用redux保存标题
 
 day8 产品列表，包括（商品详情，商品新增，商品修改），引入富文本插件react-draft-wysiwyg，使用antd 文件上传组件
+
+day9 角色创建，角色权限，用户创建，用户修改，用户权限授权，数据可视化 echarts,echarts-for-react

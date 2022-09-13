@@ -55,3 +55,18 @@ export const reqAddProduct = (productObj)=>myAxios.post(`${BASE_URL}/api/manage/
 
 // 请求更新商品
 export const reqUpdateProduct = (productObj)=>myAxios.post(`${BASE_URL}/api/manage/product/update`,{...productObj})
+
+// 请求所有角色列表
+export const reqRoleList = ()=> myAxios.get(`${BASE_URL}/api/manage/role/list`)
+
+//添加角色
+export const reqAddRole = ({roleName}) => myAxios.post(`${BASE_URL}/api/manage/role/add`, {roleName});
+
+//  请求给角色授权
+export const reqAuthRole = (roleObj) => myAxios.post(`${BASE_URL}/api/manage/role/update`, {...roleObj,auth_time:Date.now()});
+
+// 请求获取所有用户列表 （同时携带着角色列表）
+export const reqUserList = ()=> myAxios.get(`${BASE_URL}/api/manage/user/list`)
+
+// 请求新增用户
+export const reqAddUser = (userObj) => myAxios.post(`${BASE_URL}/api/manage/user/add`, {...userObj});

@@ -16,3 +16,4 @@ const [form] = Form.useForm();
 
 4.antd@4 form组件中的form.resetFields()需要包裹在setTimeout中，否则无法正常重置数据
 
+5.创建redux action 保存category信息

@@ -1,5 +1,5 @@
 // react hooks API
-import React, {useEffect} from 'react'
+import React from 'react'
 // react-router-dom@6
 import {useNavigate,Navigate} from 'react-router-dom'
 import { Button, Form, Input, message } from 'antd';
@@ -17,10 +17,6 @@ function Login(props) {
     // 函数组件可以通过 useHistory 获取 history 对象。
     const history = useNavigate();
     console.log(history)
-    // 获取当前组件的props
-    useEffect(()=>{
-        console.log(props);
-    })
     // antd表单成功的值
     const onFinish = async(values) => {
         const {username, password} = values
@@ -35,7 +31,6 @@ function Login(props) {
         // 精简写法
         // 向服务器发送参数
         let result = await reqLogin(username,password)
-        console.log(result)
         // 解构赋值 服务器返回的数据
         const {status,msg,data} = result
         if (status === 0){

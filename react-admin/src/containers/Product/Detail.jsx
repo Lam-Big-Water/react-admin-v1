@@ -23,14 +23,12 @@ function Detail(props) {
     const params = useParams()
     const id = params.id
     useEffect(()=>{
-        console.log(id)
         const reduxProdList = props.productList
         if(reduxProdList.length !== 0){
             let result = reduxProdList.find((item)=>{
                 return item._id === id
             })
             if(result){
-                console.log(result)
                 const {categoryId,desc,detail,imgs,name,price} = result
                 setCategoryId(categoryId)
                 setDesc(desc)
@@ -45,7 +43,6 @@ function Detail(props) {
 
     const getProdById = async(id)=>{
         let result = await reqProdById(id)
-        console.log(result)
         // const {status,data,msg} = result
         // if(status === 0) {
         //     const {categoryId,desc,detail,imgs,name,price} = data

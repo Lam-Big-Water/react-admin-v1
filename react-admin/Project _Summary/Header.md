@@ -39,7 +39,8 @@ let pathKey = location.pathname.split('/').pop()
 
 2.截取location.pathname 参数，并用递归获取参数对应的中文标题
 
-3.将titile数据存入redux
+
+
 
 
 

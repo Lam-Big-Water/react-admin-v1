@@ -12,3 +12,5 @@ module.exports = function (app) {
         })
     );
 }
+
+// npm i http-proxy-middleware --save

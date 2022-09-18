@@ -37,7 +37,7 @@ let pathKey = location.pathname.split('/').pop()
 
 1.设置时间，天气，全屏，退出
 
-2.截取location.pathname 参数，并用递归获取参数对应的中文标题
+2.截取location.pathname 参数，并用递归获取参数对应的中文标题（只在redux没有数据，或者用户刷新时使用）
 
 
 

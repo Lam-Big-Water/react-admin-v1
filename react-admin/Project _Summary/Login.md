@@ -29,3 +29,17 @@ qs.stringify({username,password})
 
 由于在比较新的node.js版本中已被弃用querystring，在名称上有所调整，功能基本没有太大变化， 将原来的querystring改为qs即可
 ![sum2](https://user-images.githubusercontent.com/106876072/190110683-5033e320-f9b5-42b2-b2d0-0f9603ffc530.jpg)
+
+
+流程：
+
+1.限制用户输入，判断输入，获取用户登录信息
+
+2.将登录信息作为参数，向服务器发送请求
+
+3.接收服务器返回的数据，将用户信息保存到localStorage
+
+4.判断用户是否已经登录
+
+5.跳转页面
+

@@ -21,7 +21,7 @@
 
 （react18）React Hook
 
-（react庫）React Router6，redux，react-redux，redux-thunk，redux-devtools-extension
+（react庫）React Router6，redux，react-redux，redux-thunk，redux-devtools-extension，react-lazyload
 
 （Http請求交互）axios
 
